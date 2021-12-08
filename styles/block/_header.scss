@@ -1,0 +1,41 @@
+
+.navbar{
+    background-image: url(https://enlightem.eu/wp-content/uploads/2020/06/17545-scaled.jpg);
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    &-brand{
+        max-width: 220px;
+    }
+    &-toggler {
+        padding: 0.25rem 0.75rem;
+        font-size: 1.3rem;
+        line-height: 1;
+        background-color: $blue1;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        transition: box-shadow .15s ease-in-out;   
+    }
+    &-collapse {
+        text-align: center;
+        font-size: 1.2rem;
+        background-color: $blue1;
+        opacity: 0.7;
+        padding: 10px;
+        border-radius: 8px;
+        @include desktop {  
+            z-index: 1;
+            opacity: 0.95;
+        }
+    }
+    .nav-link {
+        margin-right: 0px;
+        @include desktop {
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+    }
+    
+
+
+}

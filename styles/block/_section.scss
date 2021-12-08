@@ -1,0 +1,107 @@
+h2 {
+    width: 100%;
+    margin-top: 0;
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    &::after {
+        content:" ";
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        left: 0;
+        background-color: $blue5;
+        width: 50%;
+        height: 3px;
+    }
+}
+h3 {
+    align-content: center;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: $blue5;
+    &::after {
+        content:" ";
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        left: 0;
+        background-color: $blue5;
+        width: 20%;
+        height: 2px;       
+    }
+}
+.componentes {
+    background-color: $blue2;
+    padding: 40px 0;
+}
+
+.ofertas {
+    background-color: $blue3;
+    padding: 40px 0;
+}
+.videojuegos {
+    background-color: $blue4;
+    padding: 40px 0;
+    .playstation, .xbox, .nintendo {
+        padding-top: 10px;
+    }
+}
+.card{
+    background-image: url(https://enlightem.eu/wp-content/uploads/2020/06/17545-scaled.jpg);
+    background-size: cover;
+    background-color: $blue1;
+    border-radius: 8px;
+    
+    img{
+        background-color: white;
+        width: calc(100% - 40px);
+        margin: 20px;
+        padding: 10px 40px;
+        border: solid 2px $blue5;
+        border-radius: 15px !important;
+    }
+    &-body {
+    display: flex;
+    background-color: $blue1;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+
+    }
+    &-title {
+        text-align:center;
+        font-weight: bold;
+        font-size: 1.20rem;
+        margin-bottom: 15px;
+    }
+    &-text {
+        letter-spacing: 0.3px;
+        margin-bottom: 10px;
+    }
+    &-sale{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        border-radius: 15px;
+        border: solid 2px $blue5;
+        padding: 12px;
+        font-weight: bold;
+        color: $blue5;
+        background-color: $blue2;
+    }
+
+    .btn {
+        display: block;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+}
+
+@include desktop {
+    .card-group>.card+.card {
+        margin-left: 10px;        
+    }
+}
